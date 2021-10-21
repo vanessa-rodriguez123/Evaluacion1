@@ -1,8 +1,7 @@
 
 
-<style>
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap');
-</style>
+
 
 /*
 Modifique un mínimo de tres variables dentro de :root{} 
@@ -11,8 +10,9 @@ Para seleccionarlas, revise: https://getbootstrap.com/docs/5.1/customize/css-var
 
 :root {
     --bs-body-font-family: "Lora", serif;
-    --bs-body-font-size: 0.9rem;
-    --bs-body-font-weight: 300;
+    --bs-body-font-size: 0.8rem;
+    --bs-body-font-weight: 500;
+    --bs-blue: #0d6efd;
 }
 
 /*
@@ -40,9 +40,9 @@ Referencia útil: https://www.adslzone.net/como-se-hace/photoshop/guardar-imagen
 En tal referencia se mencionan las alternativas https://squoosh.app/ y https://tinypng.com/
 */
 
-#fondo-con-imagen {
+#perrocallejero.jpg {
     height: 70vh;
-    background-image: url("img/define-una-imagen.png");
+    background-image: url("img/perrocallejero.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
