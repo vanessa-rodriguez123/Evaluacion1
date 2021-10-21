@@ -4,7 +4,6 @@
 
 
 /*
-Modifique un mínimo de tres variables dentro de :root{} 
 Para seleccionarlas, revise: https://getbootstrap.com/docs/5.1/customize/css-variables/
 */
 
@@ -30,26 +29,18 @@ strong {
     font-weight: 500;
 }
 
-/*
-En #fondo-con-imagen, defina una imagen para el encabezado, cuidando: 
-- pertinencia (sirve para introducir su tema);
-- legibilidad de títulos en contraste (que no se pierdan h1, h2 ni h3);
-- extensión (JPG o PNG, según corresponda a la imagen); y
-- peso (menor a 250kb, sin sacrificar resolución)
+
 Referencia útil: https://www.adslzone.net/como-se-hace/photoshop/guardar-imagen-para-web/
 En tal referencia se mencionan las alternativas https://squoosh.app/ y https://tinypng.com/
-*/
 
-#perrocallejero.jpg {
+
+#fondo-con-imagen {
     height: 70vh;
     background-image: url("img/perrocallejero.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-
-/*
-Una vez hecho los ajustes indicados como comentarios, por favor bórrelos. 
-Su lectura de los comentarios será considerada en el primer ítem de la pauta de evaluación.
-En lo que sigue, puede agregar más ajustes.
-*/
+svg {
+    position: center;
+}
