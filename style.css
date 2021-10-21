@@ -1,8 +1,8 @@
-/*
-Por favor busque su propia fuente en Google Fonts
-*/
 
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;500&display=swap");
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap');
+</style>
 
 /*
 Modifique un mínimo de tres variables dentro de :root{} 
@@ -10,7 +10,7 @@ Para seleccionarlas, revise: https://getbootstrap.com/docs/5.1/customize/css-var
 */
 
 :root {
-    --bs-body-font-family: "Rubik", sans-serif;
+    --bs-body-font-family: "Lora", serif;
     --bs-body-font-size: 0.9rem;
     --bs-body-font-weight: 300;
 }
