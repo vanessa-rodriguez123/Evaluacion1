@@ -79,10 +79,7 @@
                     <p><strong>Estos hechos representan una cruda realidad que ha comenzado a develarse especialmente tras la aprobación de la Ley Cholito y debido a que cada vez las comunidades se atreven más a acusar esto episodios ante la justicia.</p>
                     
 
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="my-5">
-                        
-                        <image width="100" height="100" clip-path="url(#recorte)" xlink:href="https://as01.epimg.net/mexico/imagenes/2021/07/27/actualidad/1627342827_044063_1627342897_noticia_normal.jpg" >
-                    </svg>
+                   
 
                     <p> El sitio web –www.registratumascota.cl- también nos permite saber, por ejemplo, que la región con más mascotas inscritas es la Metropolitana, seguida por Valparaíso, Biobío, Maule, O’ Higgins y La Araucanía, en ese orden, y que en todas predominan los perros por sobre los felinos</p>
                     
@@ -107,7 +104,8 @@ En el caso de los gatos, Luna lidera el ranking. Luego vienen Pelusa, Tom, Princ
             </div>
         </footer>
         <!--con el siguiente script escondo el nav fijo según avance del scroll -->
-      <script>
+       <script>
+
             var altura = document.getElementById("fondo-con-imagen").offsetHeight;
             window.addEventListener("scroll", (event) => {
                 let scroll = this.scrollY;
@@ -120,42 +118,41 @@ En el caso de los gatos, Luna lidera el ranking. Luego vienen Pelusa, Tom, Princ
                 }
             });
         </script>
-        <!--con el siguiente script voy a buscar la biblioteca Chart.js-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"
             integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q=="
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         ></script>
-        <!--con el siguiente script voy a buscar datos a un JSON y con ellos construyo un gráfico de barras-->
+           
         <script>
-            fetch("https://myjson.dit.upm.es/api/bins/1wn3")
+             fetch("https://myjson.dit.upm.es/api/bins/lwv")
                 .then((response) => response.json())
                 .then((poblacion) => {
                     console.log(poblacion);
-                    var años = [],
-                        losHombres = [],
-                        lasMujeres = [];
+                    var region = [],
+                        gatos = [],
+                        perros = [];
 
                     poblacion.forEach((d) => {
-                        lasRegiones.push(d.region);
-                        losHombres.push(d.hombres);
-                        lasMujeres.push(d.mujeres);
+                        region.push(d.region);
+                        gatos.push(d.gatos);
+                        perros.push(d.perros);
                     });
 
                     new Chart(document.getElementById("misBarritas").getContext("2d"), {
                         type: "bar",
                         data: {
-                            labels: años,
+                            labels: region,
                             datasets: [
                                 {
-                                    data: losHombres,
-                                    backgroundColor: "#f1a340",
-                                    label: "Hombres",
+                                    data: gatos,
+                                    backgroundColor: "#94c1e2",
+                                    label: "gatos",
                                 },
                                 {
-                                    data: lasMujeres,
-                                    backgroundColor: "#645294",
-                                    label: "Mujeres",
+                                    data: perros,
+                                    backgroundColor: "#0073a1",
+                                    label: "perros",
                                 },
                             ],
                         },
@@ -172,7 +169,7 @@ En el caso de los gatos, Luna lidera el ranking. Luego vienen Pelusa, Tom, Princ
                             plugins: {
                                 title: {
                                     display: true,
-                                    text: "Cifras de servicios policiales asociadas al delito de abandono o maltrato animal en Chile",
+                                    text: "REGISTRO DE PERROS Y GATOS",
                                 },
                             },
                         },
